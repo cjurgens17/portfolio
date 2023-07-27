@@ -16,6 +16,8 @@
   --line-height: 1.7rem;
   --transition: 0.3s;
   --p-font-size: 1.1rem;
+  --h-font-size: 2.5rem;
+  --h-intro-size: 5rem;
   --bit-distance: 10%;
 }
 /* Variables end */
@@ -122,36 +124,69 @@ section {
 }
 
 .intro-heading {
-    font-size: 5rem;
+    font-size: var(--h-intro-size);
     text-decoration: underline;
 }
 
 .intro-p {
     font-size: var(--p-font-size);
     font-weight: var(--normal-font);
-    width: 70ch;
+    max-width: 70ch;
     line-height: var(--line-height);
     word-wrap: break-word;
     color: gray;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+.stack {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  'tool'
+  'stack'
+  'live'
+  'sc';
+  place-content: start;
+  gap: 16px;
+}
 
-  th, td {
-    padding: 10px;
-    text-align: left;
-  }
+#tool {
+  grid-area: tool;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 32px;
+}
+#stack {
+  grid-area: stack;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 32px;
+}
+#live {
+  grid-area: live;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 32px;
+}
+#sc {
+  grid-area: sc;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 32px;
+}
 
-  tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Alternate row background color for better readability */
-  }
-
-  tbody tr:hover {
-    background-color: #ddd; /* Hover color for better user interaction */
-  }
 
   /* end intro */
 
@@ -183,7 +218,7 @@ table {
   }
 
   .purpose-header {
-    font-size: 2.5rem;
+    font-size: var(--h-font-size);
     font-weight: 600;
     letter-spacing: 0.02em;
   }
@@ -191,7 +226,7 @@ table {
   .purpose-p {
     font-size: var(--p-font-size);
     font-weight: var(--normal-font);
-    width: 70ch;
+    max-width: 70ch;
     line-height: var(--line-height);
     word-wrap: break-word;
     color: gray;
@@ -223,7 +258,7 @@ table {
   }
 
   .technology-explanation h3 {
-    font-size: 2.5rem;
+    font-size: var(--h-font-size);
     font-weight: 600;
     letter-spacing: 0.02em;
   }
@@ -231,7 +266,7 @@ table {
   .technology-explanation p {
     font-size: var(--p-font-size);
     font-weight: var(--normal-font);
-    width: 50ch;
+    max-width: 50ch;
     line-height: var(--line-height);
     word-wrap: break-word;
     color: gray;
@@ -265,7 +300,7 @@ table {
     justify-content: flex-start;
     align-items: center;
     gap: 32px;
-    flex: 1fr;
+    flex: 1;
   }
 
   .picture-row-two {
@@ -273,7 +308,7 @@ table {
     justify-content: flex-start;
     align-items: center;
     gap: 32px;
-    flex: 1fr;
+    flex: 1;
   }
 
   .picture {
@@ -285,6 +320,7 @@ table {
     width: 500px;
     box-shadow: 0 3px 24px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+    flex: 1;
   }
 
   .first {
@@ -308,7 +344,7 @@ table {
   }
 
   .thoughts h3 {
-    font-size: 2.5rem;
+    font-size: var(--h-font-size);
     font-weight: 600;
     letter-spacing: 0.02em;
   }
@@ -316,7 +352,7 @@ table {
   .thoughts p {
     font-size: var(--p-font-size);
     font-weight: var(--normal-font);
-    width: 70ch;
+    max-width: 70ch;
     line-height: var(--line-height);
     word-wrap: break-word;
     color: gray;
@@ -331,7 +367,7 @@ table {
   }
 
   .lessons h3 {
-    font-size: 2.5rem;
+    font-size: var(--h-font-size);
     font-weight: 600;
     letter-spacing: 0.02em;
   }
@@ -339,7 +375,7 @@ table {
   .lessons p {
     font-size: var(--p-font-size);
     font-weight: var(--normal-font);
-    width: 70ch;
+    max-width: 70ch;
     line-height: var(--line-height);
     word-wrap: break-word;
     color: gray;
@@ -350,57 +386,115 @@ table {
   footer {
     display: grid;
     grid-template-areas: 
-    'reach links';
+    'reach';
     width: 100%;
     padding: 16px;
     height: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-#reach {
-  grid-area: reach;
-  width: 100%;
-  height: 100%;
+footer h3 {
+  font-size: var(--h-font-size);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  justify-self: center;
+}
+
+footer p {
+  font-size: var(--p-font-size);
+  font-weight: var(--normal-font);
+  max-width: 70ch;
+  line-height: var(--line-height);
+  word-wrap: break-word;
+  color: gray;
+}
+
+
+.icon-flex {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding-left: 32px;
-  gap: 16px;
+  gap: 36px;
 }
 
-.bit-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
+
+/* responsive */
+/* laptop */
+@media screen and (max-width: 1075px){
+ .picture-row-one {
+  flex-direction: column;
+ }
+
+ .picture-row-two {
+  flex-direction: column;
+ }
+
+ .technology {
+  flex-direction: column;
+  gap: 64px;
+ }
+
+ .pictures {
+  gap: 32px;
 }
 
-.bits {
-  position: absolute;
-  animation: slideAnimation 10s ease-in-out infinite;
+.first {
+  transform: translateY(0%);
 }
 
-@keyframes slideAnimation {
-  0% {
-    transform: translateX(0); /* Start position at 0px */
+.last {
+  transform: translateY(0%);
+}
+
+.spacer {
+  height: 75px;
+}
+}
+
+/* tablets and medium sized devices */
+@media screen and (max-width: 740px){
+  main {
+    padding: 64px;
   }
-  50% {
-    transform: translateX(560px); /* Translate to 50% of the container width */
+  :root{
+    --h-font-size: 1.75rem;
+    --h-intro-size: 3rem;
   }
-  100% {
-    transform: translateX(0); /* Back to the start position */
+
+  .picture {
+   width: 300px;
+  }
+   
+}
+
+
+@media (max-width: 600px) {
+  th, td {
+    display: block;
+    width: 100%;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  td::before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 }
 
-#links {
-  align-self: center;
-  grid-area: links;
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  gap: 80px;
-  justify-content: space-around;
-  align-items: center;
-  border: solid 4px black;
+/* Optional styling for links and other elements */
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
