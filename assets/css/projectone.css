@@ -228,6 +228,10 @@ section {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 32px;
+    transform: translateX(-25%);
+    opacity: 0;
+    will-change: transform opacity;
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
   }
 
   .purpose-header {
@@ -423,6 +427,10 @@ footer p {
   word-wrap: break-word;
   color: gray;
   text-align: center;
+}
+
+footer a:hover {
+  transform: scale(1.2);
 }
 
 
