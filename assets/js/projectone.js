@@ -18,24 +18,75 @@ navLink.forEach((link) =>
     ul.classList.remove("show");
   })
 );
-
+//adding animation for inersectionObserverAPI
 window.addEventListener('load',(event) => {
-  createObserver();
+  createObserver(document.querySelector('#purpose-observed'), purposeOptions, purposeCallback);
+  createObserver(document.querySelector('#technology-observed'), technologyOptions, technologyCallback);
+  createObserver(document.querySelector('#p1-observed'), p1Options, p1Callback);
+  createObserver(document.querySelector('#p2-observed'), p2Options, p2Callback);
+  createObserver(document.querySelector('#p3-observed'), p3Options, p3Callback);
+  createObserver(document.querySelector('#p4-observed'), p4Options, p4Callback);
+  createObserver(document.querySelector('#lessons-observed'), lessonsOptions, lessonsCallback);
+  createObserver(document.querySelector('#footer-observed'), footerOptions, footerCallback);
 });
 
-function createObserver(){
-  let target = document.querySelector('#purpose-observed');
-  let options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5
-  };
-
-  let observer = new IntersectionObserver(headerCallback, options);
+//modularized function to make Observers
+function createObserver(target, options, callback){
+  let observer = new IntersectionObserver(callback, options);
   observer.observe(target);
+}
+
+//options for intersectionObseverAPI
+let purposeOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
 };
 
-function headerCallback(entries, observer){
+let technologyOptions = {
+  root: null,
+  rootMargin: '96px',
+  threshold: 0.80
+}
+
+let p1Options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.80
+}
+
+let p2Options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.90
+}
+
+let p3Options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.80
+}
+
+let p4Options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.80
+}
+
+let lessonsOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.80
+}
+
+let footerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.70
+}
+
+//Unique callbacks for intersectionObserverAPI
+function purposeCallback(entries, observer){
   entries.forEach((entry) => {
     console.log('entry', entry)
     if(entry.intersectionRatio >= 0.5){
@@ -45,6 +96,81 @@ function headerCallback(entries, observer){
     }
   });
 }
+
+function technologyCallback(entries, observer){
+  entries.forEach((entry) => {
+    console.log('entry',entry);
+    if(entry.intersectionRatio >= 0.80){
+      entry.target.style.transform = 'translateX(0)';
+      entry.target.style.opacity = 1;
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function p1Callback(entries, observer) {
+  entries.forEach((entry) => {
+    if(entry.intersectionRatio >= .80){
+      entry.target.style.transform = 'translateY(-15%)';
+      entry.target.style.opacity = 1;
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function p2Callback(entries, observer) {
+  entries.forEach((entry) => {
+    if(entry.intersectionRatio >= .90){
+      entry.target.style.transform = 'translateX(0)';
+      entry.target.style.opacity = 1;
+      observer.unobserve(entry.target);
+    }
+  })
+}
+
+function p3Callback(entries, observer) {
+  entries.forEach((entry) => {
+    if(entry.intersectionRatio >= .80){
+      entry.target.style.transform = 'translateX(0)';
+      entry.target.style.opacity = 1;
+      observer.unobserve(entry.target);
+    }
+  })
+}
+
+function p4Callback(entries, observer) {
+  entries.forEach((entry) => {
+    if(entry.intersectionRatio >= .80){
+      entry.target.style.transform = 'translateY(15%)';
+      entry.target.style.opacity = 1;
+      observer.unobserve(entry.target);
+    }
+  })
+}
+
+function lessonsCallback(entries, observer) {
+  entries.forEach((entry) => {
+    if(entry.intersectionRatio >= .80){
+      entry.target.style.transform = 'translateX(0)';
+      entry.target.style.opacity = 1;
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function footerCallback(entries, observer) {
+  entries.forEach((entry) => {
+    if(entry.intersectionRatio >= .70){
+      entry.target.style.transform = 'translateY(0)';
+      entry.target.style.opacity = 1;
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+
+
+
 
 
 

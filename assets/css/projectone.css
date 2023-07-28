@@ -231,7 +231,7 @@ section {
     transform: translateX(-25%);
     opacity: 0;
     will-change: transform opacity;
-    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
   }
 
   .purpose-header {
@@ -253,9 +253,13 @@ section {
 
   /* tehcnology explanation */
   .technology {
+    opacity: 0;
+    transform: translateX(25%);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    will-change: transform opacity;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
   }
 
   .technology-icons {
@@ -331,6 +335,7 @@ section {
   .picture {
     object-fit: contain;
     object-position: center;
+    opacity: 0;
     width: 50%;
     padding: 4px;
     height: 300px;
@@ -338,6 +343,24 @@ section {
     box-shadow: 0 3px 24px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     flex: 1;
+    will-change: transform opacity;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+  }
+
+  #p1-observed {
+    transform: translateY(-25%);
+  }
+
+  #p2-observed {
+    transform: translateX(25%);
+  }
+
+  #p3-observed {
+    transform: translateX(-25%);
+  }
+
+  #p4-observed {
+    transform: translateY(25%);
   }
 
   .first {
@@ -376,11 +399,15 @@ section {
   }
 /* lessons */
   .lessons {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 16px;
+    will-change: transform opacity;
+    transform: translateX(-25%);
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
   }
 
   .lessons h3 {
@@ -410,6 +437,10 @@ section {
     justify-content: center;
     align-items: center;
     gap: 24px;
+    opacity: 0;
+    transform: translateY(-25%);
+    will-change: transform opacity;
+    transition: transform 1.5s, ease-out, opacity 1.5s ease-out;
 }
 
 footer h3 {
@@ -429,8 +460,17 @@ footer p {
   text-align: center;
 }
 
-footer a:hover {
-  transform: scale(1.2);
+@keyframes footerContactAnimation {
+  from {
+    transform: scale(1); /* Initial scale value */
+  }
+  to {
+    transform: scale(1.5); /* Final scale value */
+  }
+}
+
+footer a {
+  animation: footerContactAnimation 1s ease-in-out infinite alternate;
 }
 
 
