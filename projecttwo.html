@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--CSS Styles -->
+  <link rel="stylesheet" href="assets/css/projectone.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets\icons\icons8-3d-64.png" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+  <title>Pokemon Trading Project</title>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1 style="padding-right: 16px;">Christopher Jurgens</h1>
+    <ul class="navigation">
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+      <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="burger-menu" id="burger-menu">
+      <ion-icon class="bars" name="menu-outline"></ion-icon>
+    </button>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Main Content -->
+  <main>
+    <!-- Intro -->
+    <section class="intro">
+      <h3 class="intro-heading">Pokemon Trading</h3>
+      <p class="intro-p">This app's focus was to fully build out a full-stack program. There were a lot of user stories and different functionalities that were implemented to reinforce my learning along the way. The main achievements for this project were the development of a custom API built with Java and Spring for the backend, which is connected to a persistence layer; a PostgresSQL database. I also implemented Angular Material, Tailwind, got comfortable with RxJS, and interacted with a third-party API, etc. Overall, this was a fun build, and I learned so much along the way.</p>
+      <section class="stack">
+        <div id="tool">
+          <h1>Type</h1>
+          <p>Full-Stack</p>
+          <p>Dynamic</p>
+          <p>REST API</p>
+        </div>
+        <div id="stack">
+          <h1>Stack</h1>
+          <p>Java</p>
+          <p>Spring</p>
+          <p>Angular</p>
+          <p>PostgresSQL</p>
+          <p>Tailwind</p>
+          <p>RxJS</p>
+        </div>
+        <div id="live">
+          <h1>Live</h1>
+          <a href="https://pokemon-trading.herokuapp.com/home" target="_blank" title="https://pokemon-trading.herokuapp.com/home">View Site</a>
+        </div>
+        <div id="sc">
+          <h1>Source Code</h1>
+          <a href="https://github.com/cjurgens17/PokemonTradingApp" target="_blank" title="https://github.com/cjurgens17/PokemonTradingApp">Github</a>
+        </div>
+      </section>
+    </section>
+    <!-- Hero Image -->
+    <section>
+      <div class="hero-img">
+        <img src="assets\images\Screenshot (454).png">
+      </div>
+    </section>
+    <!-- Purpose -->
+    <section id="purpose-observed" class="purpose">
+      <h3 class="purpose-header">Project Goal and Purpose</h3>
+      <p class="purpose-p">The purpose of this project was to LEARN. I spent a lot of time researching and learning new technologies. I mainly wanted to build a full-stack application that had all the strings attached; log-in, sign-up, REST Api, database, third-party and browser-apis, Reactive Development, user profiles, and a trading functionality for a nice challenge. This project currently has around 10 active users, most of which are former batchmates from the coding bootcamp I attended.</p>
+    </section>
+    <!-- technology -->
+    <section id="technology-observed" class="technology">
+      <div class="technology-icons">
+        <div class="flex-tech">
+            <img src="assets\icons\icons8-angular.svg" alt="Angular" loading="lazy" title="Angular"/>
+            <h1 style="color: gray;">Angular</h1>
+          </div>
+        <div class="flex-tech">
+          <img src="assets\icons\icons8-java.svg" alt="Java" loading="lazy" title="Java" />
+          <h1 style="color: gray;">Java</h1>
+        </div>
+        <div class="flex-tech">
+          <img src="assets\icons\icons8-spring.svg" alt="Spring" loading="lazy" title="Spring"/>
+          <h1 style="color: gray;">Spring</h1>
+        </div>
+      </div>
+      <div class="technology-explanation">
+        <h3>Web Stack Choices</h3>
+        <p>Java and Spring were chosen for the backend to provide an enterprise-level REST API. This provided a great approach to implement microservices with the modularity and scalability that Spring provides in synergy with Java. The Maven build tool was also another excellent addition, as it provided great management and packaging tooling for the server.</p>
+        <p>Angular is my framework of choice, so that was the immediate decision. It provided great view modularity through the various components I was able to build and route.  Angular's RxJS state management was also instrumental in facilitating reactive development on the client-side and maintaining data streams. Design and styling were not the main concerns for this project, so I wanted something that would be quick to implement and package. I decided to go with Tailwind.</p>
+      </div>
+    </section>
+    <div class="spacer"></div>
+    <!-- pictures -->
+    <section class="picture-position">
+    <div class="pictures">
+    <div class="picture-row-one">
+      <img id="p1-observed" class="picture first" src="assets\images\Screenshot (455).png">
+      <img id="p2-observed" class="picture" src="assets\images\Screenshot (456).png">
+    </div>
+    <div class="picture-row-two">
+      <img id="p3-observed" class="picture" src="assets\images\Screenshot (459).png">
+      <img id="p4-observed" class="picture last" src="assets\images\pokemontrading.png">
+    </div>
+  </div>
+    </section>
+    <div class="spacer"></div>
+    <!-- Thought Process -->
+    <section class="thoughts">
+      <h3>Problems and Thoughts</h3>
+      <p>Along the way, the implementation of RxJS began to become more complex, so I needed to really take a step back and think about the design of the data streams I was constructing. This process involved learning more about Hot and Cold Observables, Higher Order Observables, and really digesting the flow of data between components.</p>
+      <p>One of the main features, that of trading Pokemon between users, was deceivingly more complicated than I had anticipated it to be. The reason being the many different unexpected behaviors that could take place during the interaction of two user accounts reactively. A lot of test cases needed to be implemented.</p>
+      <p>Naming conventions, naming conventions, naming conventions. There were many times thoughout this development cycle where I had to spend an unwanted amount of time trying to decipher zodiac code due to my poor naming conventions!</p>
+    </section>
+  <!-- hero img 2 -->
+    <article class="hero-img">
+      <img  src="assets\images\Screenshot (460).png">
+    </article>
+    <div class="spacer"></div>
+    <!-- lessons learned -->
+    <section id='lessons-observed' class="lessons">
+      <h3>Lessons Learned</h3>
+      <p>One of the most important takeaways from this project was to pay attention and take the time to properly name variables, objects, functions, etc... Not only will it make code easier to understand and read, but somebody new coming on to a codebase will have a much easier time understanding the thought process of other developers. I now make this a conscious concern and take more time to properly name things than I did in the past.</p>
+      <p>Furthermore, in the context of design, I discovered the vital importance of considering and thoroughly examining potential abnormal use cases. While an initial implementation of a particular functionality might seem straightforward, unexpected behaviors can undoubtedly arise. By contemplating the scalability and behavior of the functionality, adopting better design patterns can significantly improve the implementation timeline. Comprehensive testing also proved to be invaluable in such situations. I made sure to achieve over 90% code coverage through testing on my backend API, which effectively minimized potential time-consuming issues.</p>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer id="footer-observed">
+      <h3>Get In Contact</h3>
+      <p>If you want to collaborate or speak further, I'm always open to new possibilites. You can contact me through these socials!</p>
+      <div class="icon-flex">
+        <a href="https://www.linkedin.com/in/christopher-jurgens/" target="_blank" title="Linkedin"><img src="assets\icons\icons8-linkedin.svg"></a>
+        <a href="mailto:chrisjurgens12317@gmail.com" target="_blank" title="Gmail"><img src="assets\icons\icons8-gmail.svg"></a>
+      </div>
+      <div style="height: 100px;" class="spacer"></div>
+  </footer>
+  <!-- html sript -->
+  <script src="assets/js/projecttwo.js"></script>
+      <!-- Ion icons scripts -->
+      <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+</body>
+</html>
