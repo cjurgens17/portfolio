@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--CSS Styles -->
+  <link rel="stylesheet" href="assets/css/projects.css" />
+  <title>Coffee Brothers Project</title>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1 style="padding-right: 16px;">Christopher Jurgens</h1>
+    <ul class="navigation">
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+      <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="burger-menu" id="burger-menu">
+      <ion-icon class="bars" name="menu-outline"></ion-icon>
+    </button>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Main Content -->
+  <main>
+    <!-- Intro -->
+    <section class="intro">
+      <h3 class="intro-heading">Coffee Brothers</h3>
+      <p class="intro-p">I'm a big fan of coffee, so I thought it was only right to build out an e-commerce store that sells Coffee! The main objectives for this project were to focus more on design using vanilla CSS. I really wanted to get a better handle on layouts, animations, and building out interactive user components. Additionally, I wanted to include a legitimate checkout solution, so I connected it to the Stripe API.</p>
+      <section class="stack">
+        <div id="tool">
+          <h1>Type</h1>
+          <p>Full-Stack</p>
+          <p>Dynamic</p>
+          <p>Stripe API</p>
+        </div>
+        <div id="stack">
+          <h1>Stack</h1>
+          <p>Angular</p>
+          <p>Node.JS</p>
+          <p>Stripe API</p>
+          <p>Vanilla CSS</p>
+          <p>RxJS</p>
+        </div>
+        <div id="live">
+          <h1>Live</h1>
+          <a href="https://coffeebrothers-7ec5c7fdf171.herokuapp.com/home" target="_blank" title="https://coffeebrothers-7ec5c7fdf171.herokuapp.com/home">View Site</a>
+        </div>
+        <div id="sc">
+          <h1>Source Code</h1>
+          <a href="https://github.com/cjurgens17/EcommerceApp" target="_blank" title="https://github.com/cjurgens17/EcommerceApp">Github</a>
+        </div>
+      </section>
+    </section>
+    <!-- Hero Image -->
+    <section>
+      <div class="hero-img">
+        <img src="assets\images\Screenshot (467).png">
+      </div>
+    </section>
+    <!-- Purpose -->
+    <section id="purpose-observed" class="purpose">
+      <h3 class="purpose-header">Project Goal and Purpose</h3>
+      <p class="purpose-p">I intended to treat this project as if I were working for a real client. Keeping track of user stories, implementing sprints, and reworking the design to accommodate potential client changes were a few of the methods that I adopted while building this website.</p>
+    </section>
+    <!-- technology -->
+    <section id="technology-observed" class="technology">
+      <div class="technology-icons">
+        <div class="flex-tech">
+            <img src="assets\icons\icons8-angular.svg" alt="Angular" loading="lazy" title="Angular"/>
+            <h1 style="color: gray;">Angular</h1>
+          </div>
+        <div class="flex-tech">
+          <img src="assets/icons/nodejs-icon.svg" alt="Node.JS" loading="lazy" title="Node.JS" />
+          <h1 style="color: gray;">Node.JS</h1>
+        </div>
+        <div class="flex-tech">
+          <img src="assets\icons\icons8-stripe.svg" alt="Stripe" loading="lazy" title="Stripe"/>
+          <h1 style="color: gray;">Stripe</h1>
+        </div>
+      </div>
+      <div class="technology-explanation">
+        <h3>Web Stack Choices</h3>
+        <p>I chose Angular for the ease of implementing the cart system. RxJS worked very well in maintaining the state of the cart as the user interacts with the site, enabling features such as adding, removing, updating quantity, and checking out.</p>
+        <p>Apart from the cart, the other concern was maintaining a server that would be able to connect the user to the Stripe checkout. I went with Node.js for the ease of using JavaScript, and to quickly set up a server that could be up and running within minutes. This approach ended up working well, and the overall design of the project went pretty smoothly.</p>
+      </div>
+    </section>
+    <div class="spacer"></div>
+    <!-- pictures -->
+    <section class="picture-position">
+    <div class="pictures">
+    <div class="picture-row-one">
+      <img id="p1-observed" class="picture first" src="assets\images\Screenshot (468).png">
+      <img id="p2-observed" class="picture" src="assets\images\Screenshot (469).png">
+    </div>
+    <div class="picture-row-two">
+      <img id="p3-observed" class="picture" src="assets\images\Screenshot (470).png">
+      <img id="p4-observed" class="picture last" src="assets\images\Screenshot (474).png">
+    </div>
+  </div>
+    </section>
+    <div class="spacer"></div>
+    <!-- Thought Process -->
+    <section class="thoughts">
+      <h3>Problems and Thoughts</h3>
+      <p>Coming from a Java/Spring background of implementing REST APIs, this time around, I needed to change that up and learn more about Node.js. Initially, I needed to do some more research to get the right syntax going and to understand how to package everything correctly in the package.json file.</p>
+      <p>The coffee slide animation on the home page was also a big undertaking that I initially did not think would take so long to figure out. I knew I wanted to build it from scratch to really understand the inner workings a bit more. As a result, this functionality took longer than expected, but ultimately, it proved to be a great learning experience. Finally seeing it work provided a great feeling of victory.</p>
+    </section>
+  <!-- hero img 2 -->
+    <article class="hero-img">
+      <img  src="assets\images\Screenshot (472).png">
+    </article>
+    <div class="spacer"></div>
+    <!-- lessons learned -->
+    <section id='lessons-observed' class="lessons">
+      <h3>Lessons Learned</h3>
+      <p>Getting experience with the Stripe API was a good lesson for me. I feel more comfortable with going through their documentation now, and if the use case for implenting it into a client project ever came up, I would feel pretty confident in being able to make that connection.</p>
+      <p>Furthermore, this project strengthened my working knowledge of CSS as I delved deeper into grid layouts, flex layouts, and positioned layout. I gained a better understanding of in-flow and out-of-flow elements, as well as creating responsive layouts in a more concise and scalable manner. This was an important learning experience for me.</p>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer id="footer-observed">
+      <h3>Get In Contact</h3>
+      <p>If you want to collaborate or speak further, I'm always open to new possibilites. You can contact me through these socials!</p>
+      <div class="icon-flex">
+        <a href="https://www.linkedin.com/in/christopher-jurgens/" target="_blank" title="Linkedin"><img src="assets\icons\icons8-linkedin.svg"></a>
+        <a href="mailto:chrisjurgens12317@gmail.com" target="_blank" title="Gmail"><img src="assets\icons\icons8-gmail.svg"></a>
+      </div>
+      <div style="height: 100px;" class="spacer"></div>
+  </footer>
+  <!-- html sript -->
+  <script src="assets/js/projects.js"></script>
+      <!-- Ion icons scripts -->
+      <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+</body>
+</html>
