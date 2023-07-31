@@ -29,3 +29,50 @@ scrollUp.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+//skill rows
+let rowTwo = Array.from(document.querySelectorAll('.skill-row2'));
+let rowOne = Array.from(document.querySelectorAll('.skill'));
+
+window.addEventListener('load', (event) => {
+  createObserver(skills, rowTwo, updateSkillStyles);
+  createObserver(skills,rowOne,updateSkillStyles);
+});
+//intersection Observer API
+function createObserver(options, targets, callback) {
+  for (let obs of targets) {
+    let observer = new IntersectionObserver(callback, options);
+    observer.observe(obs);
+  }
+}
+//options
+let skills = {
+  root: null,
+  rootMargin: '0px',
+  threshold: [0.40,0.80]
+};
+
+function updateSkillStyles(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio >= 0.80) {
+      console.log(entries)
+      rowTwo.forEach((ele,index) => {
+        setTimeout(() => {
+          ele.style.transform = 'translateX(0)';
+          ele.style.opacity = 1;
+        }, 500 * index);
+      }); 
+      //stop observing once last row fades in
+      observer.unobserve(entry.target)
+    } else if(entry.intersectionRatio >= 0.40){
+      console.log(entries)
+      rowOne.forEach((ele,index) => {
+        setTimeout(() => {
+          ele.style.transform = 'translateX(0)';
+          ele.style.opacity = 1;
+        }, 500 * index);
+      });
+    }
+  });
+}
+
