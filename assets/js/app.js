@@ -35,8 +35,8 @@ let rowTwo = Array.from(document.querySelectorAll('.skill-row2'));
 let rowOne = Array.from(document.querySelectorAll('.skill'));
 
 window.addEventListener('load', (event) => {
-  createObserver(skills, rowTwo, updateSkillStyles);
-  createObserver(skills,rowOne,updateSkillStyles);
+  createObserver(skills, rowTwo, updateSecondRow);
+  createObserver(skills,rowOne,updateFirstRow);
 });
 //intersection Observer API
 function createObserver(options, targets, callback) {
@@ -52,27 +52,39 @@ let skills = {
   threshold: [0.40,0.80]
 };
 
-function updateSkillStyles(entries, observer) {
+function updateSecondRow(entries, observer) {
+  console.log(entries);
   entries.forEach((entry) => {
     if (entry.intersectionRatio >= 0.80) {
-      console.log(entries)
-      rowTwo.forEach((ele,index) => {
-        setTimeout(() => {
-          ele.style.transform = 'translateX(0)';
-          ele.style.opacity = 1;
-        }, 500 * index);
-      }); 
-      //stop observing once last row fades in
-      observer.unobserve(entry.target)
-    } else if(entry.intersectionRatio >= 0.40){
-      console.log(entries)
-      rowOne.forEach((ele,index) => {
+      console.log(entries);
+      rowTwo.forEach((ele, index) => {
         setTimeout(() => {
           ele.style.transform = 'translateX(0)';
           ele.style.opacity = 1;
         }, 500 * index);
       });
+      observer.unobserve(entry.target);
     }
   });
 }
+  
+
+function updateFirstRow(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio >= 0.40) {
+      console.log(entries);
+      rowOne.forEach((ele, index) => {
+        setTimeout(() => {
+          ele.style.transform = 'translateX(0)';
+          ele.style.opacity = 1;
+        }, 500 * index);
+      });
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+
+    
+
 
