@@ -84,6 +84,20 @@ function updateFirstRow(entries, observer) {
   });
 }
 
+// orchestrating animations
+const welcome = document.querySelector('#welcome');
+const nameHero = document.querySelector('#nameHero');
+const a = document.querySelector('#a');
+welcome.addEventListener('animationend', (event) => {
+  welcome.classList.add('animate__delay-1s', 'animate__zoomOutDown');
+});
+nameHero.addEventListener('animationend', (event) => {
+  nameHero.classList.add('animate__pulse', 'animate__repeat-infinite');
+});
+a.addEventListener('animationend', (event) => {
+  a.classList.add('animate__pulse', 'animate__repeat-infinte');
+});
+
 
     
 
