@@ -384,25 +384,33 @@ canvas.vanta-canvas {
 }
 
 .contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  padding-top: 24px;
+  gap: 150px;
+}
+
+.contact-form {
   max-width: 40.75rem;
-  margin: 0 auto;
   padding: 0.938rem;
   border-radius: 5px;
   box-shadow: 0 3px 10px var(--secondary-shadow);
 }
 
-.contact-form-container label {
+.contact-form label {
   line-height: 2.7em;
   font-weight: var(--bold-font);
   color: var(--primary-color);
 }
 
-.contact-form-container textarea {
+.contact-form textarea {
   min-height: 6.25rem;
   font-size: 14px;
 }
 
-.contact-form-container .input-field {
+.contact-form .input-field {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -412,6 +420,22 @@ canvas.vanta-canvas {
   border: 2px outset var(--primary-color);
   font-size: 0.875rem;
   outline: none;
+}
+
+.technology-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-tech {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  height: 50px;
 }
 
 .input-field::placeholder {
@@ -459,6 +483,7 @@ canvas.vanta-canvas {
   right: 0.5%;
   bottom: 3%;
   cursor: pointer;
+  z-index: 9999999999999;
 }
 
 .up-arrow {
@@ -572,14 +597,16 @@ footer p {
   }
 
   .contact-form-container {
-    max-width: 23.75rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 
 @media screen and (max-width: 420px) {
   .hero img {
-    height: 18rem;
-    width: 18rem;
+    height: 17rem;
+    width: 17rem;
     object-fit: contain;
     object-position: center;
   }
@@ -594,10 +621,6 @@ footer p {
 
   .project-container {
     width: 17.875rem;
-  }
-
-  .contact-form-container {
-    max-width: 17.75rem;
   }
 }
 
