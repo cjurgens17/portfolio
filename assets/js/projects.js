@@ -53,13 +53,13 @@ function createObserver(target, options, callback){
 let purposeOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.5
+  threshold: 0.40
 };
 
 let technologyOptions = {
   root: null,
   rootMargin: '96px',
-  threshold: 0.50
+  threshold: 0.40
 }
 
 let p1Options = {
@@ -71,7 +71,7 @@ let p1Options = {
 let p2Options = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.90
+  threshold: 0.60
 }
 
 let p3Options = {
@@ -102,7 +102,7 @@ let footerOptions = {
 function purposeCallback(entries, observer){
   entries.forEach((entry) => {
     console.log('entry', entry)
-    if(entry.intersectionRatio >= 0.5){
+    if(entry.intersectionRatio >= 0.40){
       entry.target.style.transform = 'translateX(0)';
       entry.target.style.opacity = 1;
       observer.unobserve(entry.target);
@@ -113,7 +113,7 @@ function purposeCallback(entries, observer){
 function technologyCallback(entries, observer){
   entries.forEach((entry) => {
     console.log('entry',entry);
-    if(entry.intersectionRatio >= 0.50){
+    if(entry.intersectionRatio >= 0.40){
       entry.target.style.transform = 'translateX(0)';
       entry.target.style.opacity = 1;
       observer.unobserve(entry.target);
@@ -133,7 +133,7 @@ function p1Callback(entries, observer) {
 
 function p2Callback(entries, observer) {
   entries.forEach((entry) => {
-    if(entry.intersectionRatio >= .90){
+    if(entry.intersectionRatio >= .60){
       entry.target.style.transform = 'translateX(0)';
       entry.target.style.opacity = 1;
       observer.unobserve(entry.target);

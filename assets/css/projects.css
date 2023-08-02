@@ -53,6 +53,11 @@ html {
   /* border: 2px solid red; */
 }
 
+main {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 ul {
   list-style-type: none;
 }
@@ -138,6 +143,14 @@ section {
     gap: 32px;
 }
 
+.sun {
+  position: sticky;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
 .intro-heading {
     font-size: var(--h-intro-size);
     text-decoration: underline;
@@ -160,7 +173,7 @@ section {
   ;
   place-content: start;
   gap: 16px;
-  box-shadow: 0 3px 24px rgba(0, 0, 0, 0.2);
+
 }
 
 #tool {
