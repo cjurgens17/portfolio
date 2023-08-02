@@ -103,7 +103,7 @@
       </div>
       <div class="technology-explanation">
         <h3>Web Stack Choices</h3>
-        <p>Java and Spring were chosen for the backend to provide an enterprise-level REST API. This provided a great approach to implement microservices with the modularity and scalability that Spring provides in synergy with Java. The Maven build tool was also another excellent addition, as it provided great management and packaging tooling for the server.</p>
+        <p>Java and Spring were chosen for the backend to provide an enterprise-level REST API. This provided a great approach to implement microservices with the modularity and scalability that Spring provides in synergy with Java. The Maven build tool was also another excellent addition, as it provided great tooling for packaging the server.</p>
         <p>Angular is my framework of choice, so that was the immediate decision. It provided great view modularity through the various components I was able to build and route.  Angular's RxJS state management was also instrumental in facilitating reactive development on the client-side and maintaining data streams. Design and styling were not the main concerns for this project, so I wanted something that would be quick to implement and package. I decided to go with Tailwind.</p>
       </div>
     </section>
@@ -126,8 +126,8 @@
     <section class="thoughts">
       <h3>Problems and Thoughts</h3>
       <p>Along the way, the implementation of RxJS began to become more complex, so I needed to really take a step back and think about the design of the data streams I was constructing. This process involved learning more about Hot and Cold Observables, Higher Order Observables, and really digesting the flow of data between components.</p>
-      <p>One of the main features, that of trading Pokemon between users, was deceivingly more complicated than I had anticipated it to be. The reason being the many different unexpected behaviors that could take place during the interaction of two user accounts reactively. A lot of test cases needed to be implemented.</p>
-      <p>Naming conventions, naming conventions, naming conventions. There were many times thoughout this development cycle where I had to spend an unwanted amount of time trying to decipher zodiac code due to my poor naming conventions!</p>
+      <p>One of the main features, that of trading Pokemon between users, was more complicated than I had anticipated it to be. Unexpected edge cases poppped up a couple times while I was functionally testing the feature.</p>
+      <p>Naming conventions! There were many times thoughout this development cycle where I had to spend more time than I wanted whilst updating features beacuse of nuanced naming conventions.</p>
     </section>
   <!-- hero img 2 -->
     <article class="hero-img">
@@ -137,8 +137,8 @@
     <!-- lessons learned -->
     <section id='lessons-observed' class="lessons">
       <h3>Lessons Learned</h3>
-      <p>One of the more important takeaways from this project was the idea to pay more attention and take the time to properly name variables, objects, functions, etc... Not only does it make code easier to understand and read, but somebody new coming on to a codebase would have a much easier time understanding the thought process of other developers. I now make this a conscious effort and take more time to properly name things than I did in the past.</p>
-      <p>Furthermore, from a design perspective, I discovered the importance of considering potential abnormal use cases. While an initial implementation of a particular functionality at times seemed straightforward, unexpected behaviors undoubtedly arised. By thinking more about scalability and behavior, I found adopting better design patterns significantly helped. Comprehensive testing also proved to be valuable. I made sure to achieve over 90% code coverage through testing on the backend API, which effectively minimized potential time-consuming issues.</p>
+      <p>One of the more important takeaways from this project was the lesson to pay more attention and take the time to properly name variables, objects, functions, etc... Not only does it make code easier to understand and read, but any future developer or teammember going over files will have a much easier time. I now make this a conscious effort and take the consideration to properly name things than I've done in the past.</p>
+      <p>Furthermore, from a design perspective, I discovered the importance of considering potential abnormal use cases. While an initial implementation of a functionality at times seemed straightforward, unexpected behaviors tended to occur. By thinking more about scalability and behavior, I found adopting better design patterns significantly helped. Comprehensive testing also proved to be valuable. I made sure to achieve over 90% code coverage through testing on the backend API, which effectively minimized potential time-consuming issues.</p>
     </section>
   </main>
      <!-- Scroll to top -->
