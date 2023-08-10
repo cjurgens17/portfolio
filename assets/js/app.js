@@ -84,11 +84,7 @@ function updateFirstRow(entries, observer) {
   });
 }
 
-// orchestrating animations
-const welcome = document.querySelector('#welcome');
-welcome.addEventListener('animationend', (event) => {
-  welcome.classList.add('animate__delay-1s', 'animate__zoomOutDown');
-});
+
 
 
 

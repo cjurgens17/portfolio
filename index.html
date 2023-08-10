@@ -50,26 +50,25 @@
       top: 220px;
       transform: translate(-25%,-125%);
       box-shadow:
-  5.3px 10.3px 131.5px -11px rgba(235, 219, 4, 0.925),
-  8.7px 16.7px 201.8px -11px rgba(235, 219, 4, 0.925),
-  11.2px 21.7px 242.8px -11px rgba(235, 219, 4, 0.925),
-  13.5px 26.1px 267.5px -11px rgba(235, 219, 4, 0.925),
-  15.9px 30.6px 283.7px -11px rgba(235, 219, 4, 0.925),
-  18.6px 35.9px 298.1px -11px rgba(235, 219, 4, 0.925),
-  22.2px 42.8px 318.2px -11px rgba(235, 219, 4, 0.925),
-  27.8px 53.5px 359.4px -11px rgba(235, 219, 4, 0.925),
-  41px 79px 500px -11px rgba(235, 219, 4, 0.925)
+      5.3px 10.3px 131.5px -11px rgba(6, 235, 82, 0.925),
+8.7px 16.7px 201.8px -11px rgba(3, 231, 98, 0.925),
+11.2px 21.7px 242.8px -11px rgba(12, 238, 69, 0.925),
+13.5px 26.1px 267.5px -11px rgba(12, 241, 81, 0.925),
+15.9px 30.6px 283.7px -11px rgb(2, 255, 78),
+18.6px 35.9px 298.1px -11px  rgb(2, 255, 23),
+22.2px 42.8px 318.2px -11px rgb(2, 225, 255),
+27.8px 53.5px 359.4px -11px rgb(2, 225, 255),
+41px 79px 500px -11px  rgb(2, 225, 255)
+;
 ;"></div>
-      <h3 id="welcome" class="animate__animated animate__zoomInDown">Welcome!</h3>
-      <h1 id="nameHero" class="animate__animated animate__fadeInLeft animate__delay-3s">I'm Chris</h1>
+      <h1 id="nameHero">I'm Chris</h1>
       <img
         src="assets/images/coder.png"
         alt="jane-doe"
         loading="lazy"
-        class="hero-img animate__animated animate__fadeInLeft animate__delay-3s"
+        class="hero-img"
       />
-      <h1 id="a" class="animate__animated animate__fadeInLeft animate__delay-3s">A</h1>
-      <div class="bio animate__animated animate__fadeInRight animate__delay-3s">
+      <div class="bio">
         <h2 class="bio-title">Full-Stack Developer</h2>
         <p class="bio-text">
           Creating one coffee at a time!
@@ -96,15 +95,12 @@
       background: linear-gradient(90deg, #ffffff, #fffffb, #ffffee, #feffdc, #feffc6, #feffac, #fdff93, #fdff79, #fdff63, #fcff51, #fcff44, #fcff40);
       top: 220px;
       box-shadow:
-  5.3px 10.3px 131.5px -11px rgba(235, 219, 4, 0.925),
-  8.7px 16.7px 201.8px -11px rgba(235, 219, 4, 0.925),
-  11.2px 21.7px 242.8px -11px rgba(235, 219, 4, 0.925),
-  13.5px 26.1px 267.5px -11px rgba(235, 219, 4, 0.925),
-  15.9px 30.6px 283.7px -11px rgba(235, 219, 4, 0.925),
-  18.6px 35.9px 298.1px -11px rgba(235, 219, 4, 0.925),
-  22.2px 42.8px 318.2px -11px rgba(235, 219, 4, 0.925),
-  27.8px 53.5px 359.4px -11px rgba(235, 219, 4, 0.925),
-  41px 79px 500px -11px rgba(235, 219, 4, 0.925)
+      5.3px 10.3px 131.5px -11px rgba(7, 238, 226, 0.925),
+8.7px 16.7px 201.8px -11px rgba(7, 238, 226, 0.925),
+11.2px 21.7px 242.8px -11px rgba(7, 238, 226, 0.925),
+13.5px 26.1px 267.5px -11px rgba(12, 238, 69, 0.925),
+15.9px 30.6px 283.7px -11px rgba(12, 238, 69, 0.925),
+18.6px 35.9px 298.1px -11px rgba(12, 238, 69, 0.925)
 ;"></div>
       <h2 class="skill-header">My Skills</h2>
         <div class="skills-wrapper animate__animated animate__pulse" style="overflow: clip;">
@@ -341,7 +337,7 @@
     <!-- Scroll to top -->
     <i class="scroll-up" id="scroll-up"
       ><img
-        src="assets/icons/icons8-upward-arrow.gif"
+        src="assets\icons\icons8-up-arrow-48.png"
         class="socicon up-arrow"
         alt=""
     /></i>
@@ -366,23 +362,23 @@
 <script>
 VANTA.BIRDS({
   el: "#about",
-  mouseControls: true,
-  touchControls: true,
+  mouseControls: false,
+  touchControls: false,
   gyroControls: false,
   minHeight: 200.00,
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
   backgroundColor: 0xf5f5f5,
-  color1:  0x1e90ff,
-  color2: 0x45acac,
+  color1: 0xD9534F,
+  color2: 0xD9534F,
   birdSize: 0.50,
   wingSpan: 10.00,
-  separation: 100.00,
+  separation: 5.00,
   alignment: 100.00,
-  cohesion: 1.00,
+  cohesion: 75.00,
   backgroundAlpha: 0.00,
-  speedLimit: 1.00
+  speedLimit: 2.00
 })
 </script>
   </body>
