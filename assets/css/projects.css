@@ -2,7 +2,7 @@
 
 /* Variables */
 :root {
-  --font-family: "Roboto", sans-serf;
+  --font-family: 'Shantell Sans', cursive, "Roboto", sans-serf;
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
@@ -487,20 +487,6 @@ footer p {
   color: gray;
   text-align: center;
 }
-
-@keyframes footerContactAnimation {
-  from {
-    transform: scale(1); /* Initial scale value */
-  }
-  to {
-    transform: scale(1.5); /* Final scale value */
-  }
-}
-
-footer a {
-  animation: footerContactAnimation 1s ease-in-out infinite alternate;
-}
-
 
 .icon-flex {
   display: flex;

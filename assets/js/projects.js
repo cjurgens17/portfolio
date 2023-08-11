@@ -182,6 +182,29 @@ function footerCallback(entries, observer) {
 }
 
 
+//animation on scroll for contact icons
+const linkedIn = document.querySelector('#linkedin');
+const gmail = document.querySelector('#gmail');
+
+function isInViewport(element){
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+function applyAnimationOnScroll(){
+    if(isInViewport(linkedIn)){
+      linkedIn.classList.add('animate__animated', 'animate__flip', 'animate__repeat-1', 'animate__slow');
+      gmail.classList.add('animate__animated', 'animate__flip', 'animate__repeat-1', 'animate__slow');
+      window.removeEventListener('scroll', applyAnimationOnScroll);
+    }
+  
+}
+
+window.addEventListener('scroll', applyAnimationOnScroll);
+
+
 
 
 
