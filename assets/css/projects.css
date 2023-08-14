@@ -4,8 +4,10 @@
 :root {
   --font-family: 'Shantell Sans', cursive, "Roboto", sans-serf;
   --normal-font: 400;
+  --medium-font: 500;
   --bold-font: 700;
   --bolder-font: 900;
+  --font-color: #575757;
   --bg-color: #fcfcfc;
   --primary-color: #4756df;
   --secondary-color: #ff7235;
@@ -154,6 +156,7 @@ section {
 .intro-heading {
     font-size: var(--h-intro-size);
     text-decoration: underline;
+    font-weight: var(--medium-font);
 }
 
 .intro-p {
@@ -162,7 +165,7 @@ section {
     max-width: 70ch;
     line-height: var(--line-height);
     word-wrap: break-word;
-    color: gray;
+    color: var(--font-color);
 }
 
 .stack {
@@ -188,6 +191,15 @@ section {
   padding: 8px;
 }
 
+#tool h1 {
+  font-weight: var(--medium-font);
+}
+
+#tool > p {
+  font-weight: var(--normal-font);
+  color: var(--font-color);
+}
+
 
 #stack {
   grid-area: stack;
@@ -199,6 +211,15 @@ section {
   align-items: baseline;
   gap: 32px;
   padding: 8px;
+}
+
+#stack h1 {
+  font-weight: var(--medium-font);
+}
+
+#stack > p {
+  font-weight: var(--normal-font);
+  color: var(--font-color);
 }
 
 
@@ -213,9 +234,11 @@ section {
   align-items: baseline;
   gap: 32px;
   padding: 8px;
-  
 }
 
+#live h1 {
+  font-weight: var(--medium-font);
+}
 
 #sc {
   grid-area: sc;
@@ -227,6 +250,10 @@ section {
   align-items: baseline;
   gap: 32px;
   padding: 8px;
+}
+
+#sc h1 {
+  font-weight: var(--medium-font);
 }
 
   /* end intro */
@@ -266,6 +293,7 @@ section {
     font-size: var(--h-font-size);
     font-weight: 600;
     letter-spacing: 0.02em;
+    font-weight: var(--medium-font);
   }
 
   .purpose-p {
@@ -274,7 +302,7 @@ section {
     max-width: 70ch;
     line-height: var(--line-height);
     word-wrap: break-word;
-    color: gray;
+    color: var(--font-color);
   }
 
   /* end purpose */
@@ -310,6 +338,7 @@ section {
     font-size: var(--h-font-size);
     font-weight: 600;
     letter-spacing: 0.02em;
+    font-weight: var(--medium-font);
   }
 
   .technology-explanation p {
@@ -318,7 +347,7 @@ section {
     max-width: 50ch;
     line-height: var(--line-height);
     word-wrap: break-word;
-    color: gray;
+    color: var(--font-color);
   }
 
   .flex-tech {
@@ -415,6 +444,7 @@ section {
     font-size: var(--h-font-size);
     font-weight: 600;
     letter-spacing: 0.02em;
+    font-weight: var(--medium-font);
   }
 
   .thoughts p {
@@ -423,7 +453,7 @@ section {
     max-width: 70ch;
     line-height: var(--line-height);
     word-wrap: break-word;
-    color: gray;
+    color: var(--font-color);
   }
 /* lessons */
   .lessons {
@@ -442,6 +472,7 @@ section {
     font-size: var(--h-font-size);
     font-weight: 600;
     letter-spacing: 0.02em;
+    font-weight: var(--medium-font);
   }
 
   .lessons p {
@@ -450,7 +481,7 @@ section {
     max-width: 70ch;
     line-height: var(--line-height);
     word-wrap: break-word;
-    color: gray;
+    color: var(--font-color);
   }
 
   /* footer */
@@ -476,6 +507,7 @@ footer h3 {
   font-weight: 600;
   letter-spacing: 0.02em;
   justify-self: center;
+  font-weight: var(--medium-font);
 }
 
 footer p {
@@ -484,7 +516,7 @@ footer p {
   max-width: 70ch;
   line-height: var(--line-height);
   word-wrap: break-word;
-  color: gray;
+  color: var(--font-color);
   text-align: center;
 }
 
@@ -610,10 +642,14 @@ footer p {
 
 }
 
-@media screen and (max-width: 320px){
-  main {
-    padding: 16px;
+@media screen and (max-width: 500px){
+  main{
+    padding: 32px;
   }
+  
+}
+
+@media screen and (max-width: 320px){
 
   .picture {
     width: 275px;

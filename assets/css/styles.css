@@ -4,8 +4,10 @@
 :root {
   --font-family:'Shantell Sans', cursive, "Roboto", sans-serf;
   --normal-font: 400;
+  --medium-font: 500;
   --bold-font: 700;
   --bolder-font: 900;
+  --font-color: #575757;
   --bg-color: #fcfcfc;
   --primary-color: #4756df;
   --secondary-color: #ff7235;
@@ -135,7 +137,9 @@ canvas.vanta-canvas {
 
 #nameHero {
  font-size: 3rem;
- font-family: var(--font-family)
+ font-family: var(--font-family);
+ font-weight: var(--medium-font);
+ color: black;
 }
 
 .bio {
@@ -147,7 +151,7 @@ canvas.vanta-canvas {
 }
 
 .bio h1 {
-  margin-bottom: var(--bottom-margin);
+  margin-bottom: var(--medium-font);
 }
 
 #a {
@@ -156,13 +160,15 @@ canvas.vanta-canvas {
 
 .bio-title {
   text-align: center;
+  font-weight: var(--medium-font);
 }
 
 .bio p {
   line-height: var(--line-height);
   padding: 0.3rem 0;
-  color: gray;
+  color: var(--font-color);
   text-align: center;
+  font-weight: var(--normal-font);
 }
 /* Hero section ends */
 
@@ -170,6 +176,7 @@ canvas.vanta-canvas {
 .about-title {
   text-align: center;
   margin-bottom: 2rem;
+  font-weight: var(--medium-font);
 }
 .more-about {
   display: grid;
@@ -187,7 +194,8 @@ canvas.vanta-canvas {
   word-wrap: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
-  color: gray;
+  font-weight: var(--normal-font);
+  color: var(--font-color);
 }
 
 .more-about p:nth-child(1) {
@@ -258,6 +266,7 @@ canvas.vanta-canvas {
 .skill-header {
   margin-top: 2rem;
   margin-bottom: 3rem;
+  font-weight: var(--medium-font);
 }
 
 .skills-wrapper img {
@@ -268,6 +277,16 @@ canvas.vanta-canvas {
   width: 11.875rem;
   height: 11.25rem;
 }
+
+.skill > h1 {
+  color: var(--font-color);
+  font-weight: var(--medium-font);
+}
+
+.skill-row2 > h1 {
+  color: var(--font-color);
+  font-weight: var(--medium-font);
+}
 /* Skills section ends */
 
 /* Projects section */
@@ -277,11 +296,14 @@ canvas.vanta-canvas {
   margin-top: 2rem;
   border-top: 2px solid var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
   padding: 16px;
 }
@@ -317,20 +339,12 @@ canvas.vanta-canvas {
   text-align: center;
   margin-bottom: 2rem;
   margin-top: calc(3rem + 10px);
-}
-
-.project-container {
-  text-align: center;
-  width: 21.875rem;
-  padding: 1rem;
-}
-
-.project-container p {
-  padding: 0.4rem;
+  font-weight: var(--medium-font);
 }
 
 .project-title {
   margin-bottom: var(--bottom-margin);
+  font-weight: var(--medium-font);
 }
 
 .project-details {
@@ -339,6 +353,8 @@ canvas.vanta-canvas {
   word-wrap: break-word;
   hyphens: auto;
   line-height: var(--line-height);
+  color: var(--font-color);
+  font-weight: var(--normal-font);
 }
 
 /* Projects section ends */
@@ -353,6 +369,7 @@ canvas.vanta-canvas {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  font-weight: var(--medium-font);
 }
 
 .contact-form-container {
@@ -474,7 +491,7 @@ footer {
 }
 
 footer p {
-  color: gray;
+  color: black;
   font-size: 1.15rem;
 }
 /* Footer section ends */
@@ -527,6 +544,10 @@ footer p {
     transform: translateX(0);
   }
 
+  .show {
+    border-radius: 4px;
+  }
+
   .hero {
     top: -20px;
     flex-direction: column;
@@ -553,7 +574,7 @@ footer p {
 
   .more-about {
     margin-top: 2rem;
-    padding: 1rem 3.5rem;
+    padding: 1rem 1.5rem;
   }
 
   .more-about h2 {
@@ -562,6 +583,22 @@ footer p {
 
   .more-about p {
     text-align: justify;
+  }
+
+  .projects {
+    padding: 1rem 0.5rem;
+  }
+
+  .skills {
+    padding: 1rem 0.5rem;
+  }
+
+  .contact {
+    padding: 1rem 0.5rem;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
   }
 
   .icon {
@@ -590,10 +627,6 @@ footer p {
 
   .bio {
     width: 16.3rem;
-  }
-
-  .project-container {
-    width: 17.875rem;
   }
 }
 

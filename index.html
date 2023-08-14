@@ -16,7 +16,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Animate CSS CDN -->
     <link
@@ -49,7 +49,7 @@
     
     <!-- Hero Section -->
  
-    <section class="hero" id="about">
+    <section class="hero" id="birds">
       <h1 id="nameHero">I'm Chris</h1>
       <img
         src="assets/images/coder.png"
@@ -58,7 +58,7 @@
         class="hero-img"
       />
       <div class="bio">
-        <h2 class="bio-title">Full-Stack Developer</h2>
+        <h2 class="bio-title" id="about">Full-Stack Developer</h2>
         <p class="bio-text">
           Creating one coffee at a time!
         </p>
@@ -71,13 +71,13 @@
         Hello there! I'm Chris. I'm a strategic introvert who enjoys wrestling with code to build cool things.
         It all started with the Joe Rogan Podcast, then Brazilian Jiu Jitsu, then the Lex Fridman Podcast, and then this thing called Javascript! The journey has been endless from there. My need for challenge and skill climbing has become satiated &#x1F604;.
       </p>
-      <p>
+      <p id="skills">
         Growing as a developer has been one of the most rewarding experiences I can muster. Building and working on projects has shown me the importance of pragamatic action. Every project I work on is a new experience; it's an opportunity to learn more, find new and efficient ways to solve problems, and build something cool - something that users will hopefully enjoy. Everyday is a new challenge and I embrace that!
         </p>
     </section>
 
     <!-- Skills section -->
-    <section class="skills" id="skills">
+    <section class="skills">
       <h2 class="skill-header">My Skills</h2>
         <div class="skills-wrapper">
 
@@ -229,6 +229,23 @@
           </p>
           <a href="projectthree.html" class="project-link">View Project</a>
         </div>
+        <div class="project-card">
+
+          <div class="img-container">
+          <img
+            src="assets\images\Screenshot (490).png"
+            alt="Reader"
+            loading="lazy"
+            class="project-pic"
+          />
+        </div>
+
+          <h3 class="project-title">Published NPM Module</h3>
+          <p class="project-details">
+            I find myself working and iterating through objects in javascript quite often , so I a found a way to ease the process. The Reader class has helper methods that make searching and retrieving values from a nested object much easier.
+          </p>
+          <a class="project-link" href="https://www.npmjs.com/package/object-helper-reader" target="_blank">View Registry</a>
+        </div>
       </div>
     </section>
 
@@ -287,7 +304,7 @@
             href="https://www.linkedin.com/in/christopher-jurgens/" target="_blank" alt="https://www.linkedin.com/in/christopher-jurgens/">
             <img src="assets\icons\icons8-linkedin.svg" alt="LinkedIn" loading="lazy" title="LinkedIn" />
             </a>
-            <h1 style="color: gray;">LinkedIn</h1>
+            <h1 style="color: #575757;">LinkedIn</h1>
           </div>
 
           <div class="flex-tech">
@@ -295,7 +312,7 @@
           href="mailto:chrisjurgens12317@gmail.com" target="_blank" alt="mailto:chrisjurgens12317@gmail.com">
             <img src="assets\icons\icons8-gmail.svg" alt="Gmail" loading="lazy" title="Gmail"/>
           </a>
-            <h1 style="color: gray;">Gmail</h1>
+            <h1 style="color: #575757;">Gmail</h1>
           </div>
 
           <div class="flex-tech">
@@ -303,7 +320,7 @@
             href="https://github.com/cjurgens17" target="_blank" alt="https://github.com/cjurgens17">
             <img src="assets\icons\icons8-github.svg" alt="Github" loading="lazy" title="Github"/>
             </a>
-            <h1 style="color: gray;">Github</h1>
+            <h1 style="color: #575757;">Github</h1>
           </div>
 
         </div>
@@ -337,7 +354,7 @@
     ></script>  
 <script>
 VANTA.BIRDS({
-  el: "#about",
+  el: "#birds",
   mouseControls: false,
   touchControls: false,
   gyroControls: false,
