@@ -1,0 +1,159 @@
+/* Variables */
+:root {
+    --font-family: 'Shantell Sans', cursive, "Helvetica", "Times New Roman", sans-serif;
+    --normal-font: 400;
+    --medium-font: 500;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --font-color: #575757;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+    --p-font-size: 1.1rem;
+    --h-font-size: 2.5rem;
+    --h-intro-size: 5rem;
+}
+
+/* Variables end */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* potential problem check */
+body {
+    font-family: var(--font-family);
+    /* isolation: isolate; */
+}
+
+/* CSS Resets end */
+
+/* Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    color: var(--primary-color);
+}
+
+nav a {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+
+nav ul li {
+    font-weight: var(--bold-font);
+}
+
+.burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+/* Navbar ends */
+/* scroll to top arrow */
+.scroll-up {
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+    z-index: 9999999999999;
+  }
+
+  .up-arrow {
+    width: 3rem;
+    height: 3rem;
+  }
+
+.socicon {
+    width: 3rem;
+    height: 3rem;
+  }
+/* scroll to top ends */
+@media screen and (max-width: 740px) {
+    nav {
+        padding: 1.5rem 1rem;
+    }
+
+    nav ul {
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav ul li {
+        margin: 8px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+    }
+
+    .show {
+        border-radius: 4px;
+    }
+
+    :root {
+        --h-font-size: 1.75rem;
+        --h-intro-size: 3rem;
+    }
+}

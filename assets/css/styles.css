@@ -1,113 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
-
-/* Variables */
-:root {
-  --font-family:'Shantell Sans', cursive, "Roboto", sans-serf;
-  --normal-font: 400;
-  --medium-font: 500;
-  --bold-font: 700;
-  --bolder-font: 900;
-  --font-color: #575757;
-  --bg-color: #fcfcfc;
-  --primary-color: #4756df;
-  --secondary-color: #ff7235;
-  --primary-shadow: #8b8eaf;
-  --secondary-shadow: #a17a69;
-  --bottom-margin: 0.5rem;
-  --bottom-margin-2: 1rem;
-  --line-height: 1.7rem;
-  --transition: 0.3s;
-  --p-font-size: 1.1rem;
-}
-/* Variables end */
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* CSS Resets */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-a:hover {
-  color: var(--secondary-color);
-}
-
+/* body */
 body {
-  font-family: var(--font-family);
   isolation: isolate;
 }
-
-/* CSS Resets end */
-
-/* Navbar */
-nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 3.5rem;
-  background-color: var(--bg-color);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav h1 {
-  color: var(--primary-color);
-}
-
-nav a {
-  color: var(--primary-color);
-  transition: var(--transition);
-}
-nav a:hover {
-  color: var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
-}
-
-nav ul {
-  display: flex;
-  gap: 1.9rem;
-}
-
-nav ul li {
-  font-weight: var(--bold-font);
-}
-
-.burger-menu {
-  color: var(--primary-color);
-  font-size: 2rem;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-  display: none;
-}
-/* Navbar ends */
 
 /* Hero section */
 /* for vanta js background-image */
 canvas.vanta-canvas {
-  background: -webkit-linear-gradient(bottom, rgba(249,251,240,1) 10%, rgba(215,253,254,1) 20%, rgba(167,222,253,1) 40%, rgba(110,175,255,1) 100%); 
-  background: -moz-linear-gradient(bottom, rgba(249,251,240,1) 10%, rgba(215,253,254,1) 20%, rgba(167,222,253,1) 40%, rgba(110,175,255,1) 100%); 
-  background: -ms-linear-gradient(bottom, rgba(249,251,240,1) 10%, rgba(215,253,254,1) 20%, rgba(167,222,253,1) 40%, rgba(110,175,255,1) 100%); 
-  background: linear-gradient(bottom, rgba(249,251,240,1) 10%, rgba(215,253,254,1) 20%, rgba(167,222,253,1) 40%, rgba(110,175,255,1) 100%) !important; 
+  background: -webkit-linear-gradient(bottom, rgba(249, 251, 240, 1) 10%, rgba(215, 253, 254, 1) 20%, rgba(167, 222, 253, 1) 40%, rgba(110, 175, 255, 1) 100%);
+  background: -moz-linear-gradient(bottom, rgba(249, 251, 240, 1) 10%, rgba(215, 253, 254, 1) 20%, rgba(167, 222, 253, 1) 40%, rgba(110, 175, 255, 1) 100%);
+  background: -ms-linear-gradient(bottom, rgba(249, 251, 240, 1) 10%, rgba(215, 253, 254, 1) 20%, rgba(167, 222, 253, 1) 40%, rgba(110, 175, 255, 1) 100%);
+  background: linear-gradient(bottom, rgba(249, 251, 240, 1) 10%, rgba(215, 253, 254, 1) 20%, rgba(167, 222, 253, 1) 40%, rgba(110, 175, 255, 1) 100%) !important;
   opacity: 0.52;
-
-  
 }
 
 .hero {
@@ -123,7 +26,6 @@ canvas.vanta-canvas {
   padding: 16px;
 }
 
-
 .hero img {
   height: 25.5rem;
   width: 25.5rem;
@@ -136,10 +38,10 @@ canvas.vanta-canvas {
 }
 
 #nameHero {
- font-size: 3rem;
- font-family: var(--font-family);
- font-weight: var(--medium-font);
- color: black;
+  font-size: 3rem;
+  font-family: var(--font-family);
+  font-weight: var(--medium-font);
+  color: black;
 }
 
 .bio {
@@ -170,6 +72,7 @@ canvas.vanta-canvas {
   text-align: center;
   font-weight: var(--normal-font);
 }
+
 /* Hero section ends */
 
 /* More about */
@@ -178,6 +81,7 @@ canvas.vanta-canvas {
   margin-bottom: 2rem;
   font-weight: var(--medium-font);
 }
+
 .more-about {
   display: grid;
   grid-template-columns: 1fr;
@@ -189,7 +93,7 @@ canvas.vanta-canvas {
   border-bottom: 2px solid var(--primary-color);
 }
 
-.more-about > p {
+.more-about>p {
   font-size: var(--p-font-size);
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -217,6 +121,7 @@ canvas.vanta-canvas {
   line-height: var(--line-height);
   padding: 0.4rem;
 }
+
 /* More about ends */
 
 /* Skills section */
@@ -278,15 +183,16 @@ canvas.vanta-canvas {
   height: 11.25rem;
 }
 
-.skill > h1 {
+.skill>h1 {
   color: var(--font-color);
   font-weight: var(--medium-font);
 }
 
-.skill-row2 > h1 {
+.skill-row2>h1 {
   color: var(--font-color);
   font-weight: var(--medium-font);
 }
+
 /* Skills section ends */
 
 /* Projects section */
@@ -449,6 +355,7 @@ canvas.vanta-canvas {
   border: 2px solid var(--primary-color);
   cursor: pointer;
 }
+
 /* Contacts section ends */
 
 /* Social buttons */
@@ -459,27 +366,6 @@ canvas.vanta-canvas {
   right: 1%;
   bottom: 50%;
 }
-
-.socicon {
-  width: 2rem;
-  height: 2rem;
-}
-/* Social button ends */
-
-/* Scroll to top button */
-.scroll-up {
-  position: fixed;
-  right: 0.5%;
-  bottom: 3%;
-  cursor: pointer;
-  z-index: 9999999999999;
-}
-
-.up-arrow {
-  width: 3rem;
-  height: 3rem;
-}
-/* Scroll to top button ends */
 
 /* Footer section */
 footer {
@@ -494,6 +380,7 @@ footer p {
   color: black;
   font-size: 1.15rem;
 }
+
 /* Footer section ends */
 
 /* General (utilities) */
@@ -516,38 +403,8 @@ footer p {
     flex-direction: column;
   }
 }
+
 @media screen and (max-width: 720px) {
-  nav {
-    padding: 1.5rem 1rem;
-  }
-  nav ul {
-    position: fixed;
-    background-color: var(--bg-color);
-    flex-direction: column;
-    top: 86px;
-    left: 10%;
-    width: 80%;
-    text-align: center;
-    transform: translateX(120%);
-    transition: transform 0.5s ease-in;
-  }
-
-  nav ul li {
-    margin: 8px;
-  }
-
-  .burger-menu {
-    display: block;
-  }
-
-  nav ul.show {
-    transform: translateX(0);
-  }
-
-  .show {
-    border-radius: 4px;
-  }
-
   .hero {
     top: -20px;
     flex-direction: column;
@@ -629,4 +486,3 @@ footer p {
     width: 16.3rem;
   }
 }
-
