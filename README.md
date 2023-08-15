@@ -1,6 +1,7 @@
 # Portfolio
 
-Welcome to my portfolio! This repository showcases my work and serves as a digital portfolio to highlight my skills and experience in the field. Feel free to explore the projects and get a glimpse of my abilities.
+Personal Portolio that highlights my most recent projects and highlights my skills.
+### [ChrisJurgens.com](https://chrisjurgens.com)
 
 
 
